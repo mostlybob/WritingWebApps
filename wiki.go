@@ -18,5 +18,5 @@ func (p *Page) save() error {
 func loadPage(title string) *Page {
 	filename := title + ".txt"
 	body, _ := ioutil.ReadFile(filename)
-	return &Page(Title: title, Body: body)
+	return &Page{Title: title, Body: body}
 }
